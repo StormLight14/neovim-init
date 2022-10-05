@@ -11,6 +11,7 @@ call plug#begin()
 Plug 'https://github.com/preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Stoozy/vimcord'
+Plug 'https://github.com/jiangmiao/auto-pairs'
 
 call plug#end()
 
