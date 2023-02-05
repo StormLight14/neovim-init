@@ -10,8 +10,9 @@ call plug#begin()
 
 Plug 'https://github.com/preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'Stoozy/vimcord'
 Plug 'https://github.com/jiangmiao/auto-pairs'
+Plug 'https://github.com/davidhalter/jedi-vim'
+Plug 'https://github.com/andweeb/presence.nvim'
 
 call plug#end()
 
