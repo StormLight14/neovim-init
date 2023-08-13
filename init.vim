@@ -18,8 +18,7 @@
 
 call plug#begin()
  Plug 'dracula/vim'
-
-udoPlug 'SirVer/ultisnips'
+ Plug 'SirVer/ultisnips'
  Plug 'honza/vim-snippets'
  Plug 'scrooloose/nerdtree'
  Plug 'preservim/nerdcommenter'
