@@ -1,21 +1,40 @@
-:set number
-:set autoindent
-:set tabstop=4
-:set shiftwidth=4
-:set smarttab
-let g:loaded_matchparen=1
+set nocompatible
+set showmatch
+set ignorecase
+set mouse=v
+set hlsearch
+set tabstop=4
+"set softtabstop=4"
+set expandtab
+set shiftwidth=4
+set autoindent
+set number
+:
+set wildmode=longest,list
+:filetype plugin indent on
+:syntax on
+:set mouse=a
+:set clipboard=unnamedplus
+:filetype plugin on
+":set cursorline
+:set ttyfast
 
-" uses vim-plug for plugins, is on aur.
 call plug#begin()
+ Plug 'dracula/vim'
+ Plug 'ryanoasis/vim-devicons'
+ Plug 'SirVer/ultisnips'
+ Plug 'honza/vim-snippets'
+ Plug 'scrooloose/nerdtree'
+ Plug 'preservim/nerdcommenter'
+ Plug 'mhinz/vim-startify'
+ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'https://github.com/preservim/nerdtree'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'https://github.com/jiangmiao/auto-pairs'
-Plug 'https://github.com/davidhalter/jedi-vim'
-Plug 'https://github.com/andweeb/presence.nvim'
+au VimEnter *  NERDTree
+au VimEnter * wincmd w
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-w> <C-w>w
 call plug#end()
 
-" Exit Vim if NERDTree is the only window remaining in the only tab.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-nmap <F2> :NERDTreeToggle<CR>
+:colorscheme dracula
