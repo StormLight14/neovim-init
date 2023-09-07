@@ -1,5 +1,6 @@
 # neovim-init
-My neovim config and plugins
+My neovim config and plugins.
+Not fully finished, don't recommend use yet.
 
 ## Requirements
 1. Rust
