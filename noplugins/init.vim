@@ -16,5 +16,3 @@
 :set clipboard=unnamedplus
 :filetype plugin on
 :set ttyfast
-
-:colorscheme dracula
